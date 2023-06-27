@@ -1,7 +1,7 @@
 <div class="comments-row">
 
   <mat-form-field appearance="legacy">
-    <input matInput type="text" placeholder="Laissez un commentaire">
+    <input matInput type="text" placeholder="Laissez un commentaire" [formControl]="commentCtrl">
   </mat-form-field>
 
   <button mat-icon-button color="primary" (click)="onLeaveComment()">

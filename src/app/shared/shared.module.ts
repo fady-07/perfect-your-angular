@@ -6,6 +6,7 @@ import {MatCardModule} from "@angular/material/card";
 import { CommentsComponent } from './components/comments/comments.component';
 import {MaterialModule} from "./material.module";
 import {MatInputModule} from "@angular/material/input";
+import {ReactiveFormsModule} from "@angular/forms";
 
 
 
@@ -16,12 +17,14 @@ import {MatInputModule} from "@angular/material/input";
   imports: [
     CommonModule,
     MaterialModule,
-    MatInputModule
+    MatInputModule,
+    ReactiveFormsModule
   ],
   exports:[
     MaterialModule,
     RouterModule,
-    CommentsComponent
+    CommentsComponent,
+    ReactiveFormsModule
   ]
 })
 export class SharedModule { }
