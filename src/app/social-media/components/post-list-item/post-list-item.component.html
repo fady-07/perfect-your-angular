@@ -1,12 +1,15 @@
-<mat-card>
+<mat-card highLight color="white">
   <mat-card-header >
     <mat-card-title>{{post.title}}</mat-card-title>
-    <mat-card-subtitle>{{post.createdDate | date}}</mat-card-subtitle>
+    <mat-card-subtitle>
+      <span style="margin-right: 10px">{{tempUser | username}}</span>
+      <span>{{post.createdDate | timeAgo}}</span>
+    </mat-card-subtitle>
   </mat-card-header>
 
   <mat-card-content>
     <img mat-card-image *ngIf="post.imageUrl as imgUrl" [src]="imgUrl" [alt]="post.title">
-    <span class="post-content">{{post.content}}</span>
+    <span class="post-content">{{post.content | shorten: 150}}</span>
   </mat-card-content>
 
   <mat-card-actions>

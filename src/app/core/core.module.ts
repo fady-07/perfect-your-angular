@@ -4,6 +4,7 @@ import { HeaderComponent } from './header/header.component';
 import { SharedModule } from '../shared/shared.module';
 import {HttpClientModule} from "@angular/common/http";
 import {RouterModule} from "@angular/router";
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 
 
 
@@ -15,7 +16,8 @@ import {RouterModule} from "@angular/router";
     CommonModule,
     SharedModule,
     RouterModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
   ],
   exports:[
     HeaderComponent

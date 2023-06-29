@@ -1,30 +1,40 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {MatToolbarModule} from "@angular/material/toolbar";
 import {RouterModule} from "@angular/router";
-import {MatCardModule} from "@angular/material/card";
 import { CommentsComponent } from './components/comments/comments.component';
 import {MaterialModule} from "./material.module";
 import {MatInputModule} from "@angular/material/input";
 import {ReactiveFormsModule} from "@angular/forms";
+import {ShortenPipe} from "./pipes/Shorten.pipe";
+import {UsernamePipe} from "./pipes/username.pipe";
+import {TimeAgoPipe} from "./pipes/time-ago.pipe";
+import {HighLightDirective} from "./directives/highLight.directive";
 
 
 
 @NgModule({
   declarations: [
-    CommentsComponent
+    CommentsComponent,
+    ShortenPipe,
+    UsernamePipe,
+    TimeAgoPipe,
+    HighLightDirective
   ],
   imports: [
     CommonModule,
     MaterialModule,
     MatInputModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
   exports:[
     MaterialModule,
     RouterModule,
     CommentsComponent,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ShortenPipe,
+    UsernamePipe,
+    TimeAgoPipe,
+    HighLightDirective
   ]
 })
 export class SharedModule { }
